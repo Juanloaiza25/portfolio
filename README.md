@@ -1,73 +1,96 @@
-# React + TypeScript + Vite
+# Portfolio – Neo‑Brutalist Web Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Demo Screenshot](https://raw.githubusercontent.com/Juanloaiza25/portfolio/main/public/screenshot.png)
 
-Currently, two official plugins are available:
+A **personal portfolio** built with **React**, **Vite**, **Tailwind CSS v4**, and **TypeScript** that showcases a bold Neo‑Brutalist aesthetic.  The site features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Custom cursor** with `framer‑motion` that changes color and size on hover.
+- **Hard‑shadow utilities** (`shadow‑hard`, `shadow‑hard‑lg`) for that distinctive 3‑D look.
+- **Responsive layout** – the header, hero, and sections adapt gracefully from mobile to large screens.
+- **Dynamic scroll progress bar**.
+- **Animated decorative elements** in the Hero section (bounce, pulse, rotation).
+- **Full‑stack developer branding** – "FULL STACK" on one line, "DEVELOPER" on the next, never wrapping.
+- **Tailwind theme extensions** for custom colors (`neo‑yellow`, `neo‑pink`, `neo‑green`, etc.) and fonts (`Outfit`, `JetBrains Mono`).
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Technology | Version |
+|------------|---------|
+| React      | 19.x |
+| Vite       | 7.x |
+| TypeScript | 5.x |
+| Tailwind CSS | 4.x |
+| Framer Motion | 12.x |
+| Lucide‑React | 0.575 |
+| Lenis (smooth scrolling) | 1.3 |
+| GSAP (optional animations) | 3.14 |
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├─ components/
+│  ├─ Header.tsx          # Fixed navigation with Neo‑Brutalist styling
+│  ├─ Hero.tsx            # Main hero section with animated shapes
+│  ├─ WhoAmI.tsx          # Personal intro card
+│  ├─ TechStack.tsx       # List of technologies
+│  ├─ ExperienceLog.tsx   # Timeline of work experience
+│  ├─ SelectedWorks.tsx   # Portfolio pieces
+│  ├─ Footer.tsx          # Footer with custom cursor support
+│  ├─ CustomCursor.tsx   # Cursor component powered by framer‑motion
+│  └─ ScrollProgress.tsx # Scroll progress bar
+├─ App.tsx                # Root component that assembles everything
+├─ index.css              # Global styles + custom utilities (shadow‑hard, text‑stroke, etc.)
+└─ main.tsx               # Vite entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Juanloaiza25/portfolio.git
+   cd portfolio
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:5173` in your browser.
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+   The optimized static files will be in the `dist/` folder.
+
+## Customisation
+
+- **Colors & Fonts** – edit `tailwind.config.js` under `theme.extend.colors` and `theme.extend.fontFamily`.
+- **Shadow utilities** – defined in `src/index.css` (`.shadow-hard`, `.shadow-hard-lg`).
+- **Cursor behaviour** – modify `CustomCursor.tsx` to change size, colour, or animation.
+- **Responsive padding** – the Header uses Tailwind’s responsive utilities (`p-4 md:p-10`). Adjust as needed.
+
+## Deploying
+
+The project can be deployed to any static‑host (Vercel, Netlify, GitHub Pages, etc.). Example for GitHub Pages:
+```bash
+npm run build
+git add dist -f
+git commit -m "Deploy to GitHub Pages"
+git push origin main
 ```
+Then enable GitHub Pages from the repository settings, pointing to the `dist/` folder.
+
+## License
+
+This project is **open source** and available under the MIT License.
+
+---
+
+*Made with ❤️ by **Juan Diego** – a full‑stack developer who loves bold, brutalist designs.*
