@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent-yellow: #FBFF48;
+  --color-accent-blue: #3b82f6;
+  --color-accent-pink: #ff4d94;
+  --color-bg-primary: #f5f5f0;
+  --color-neo-black: #000000;
+  --color-neo-white: #ffffff;
+  --color-neo-yellow: #FBFF48;
+  --color-neo-green: #4ade80;
+  --color-neo-pink: #ff4d94;
+
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f0;
+  color: #000000;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  background-attachment: fixed;
+}
+
+/* Neo-Brutalist Shadow Utility */
+.shadow-hard {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hard-lg {
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.text-stroke-black {
+  -webkit-text-stroke: 1.5px black;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* Ocultar el cursor por defecto en el HTML */
+html,
+body {
+  cursor: none;
+}
+
+/* Permitir que el cursor original se vea en hover */

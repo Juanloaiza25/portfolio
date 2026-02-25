@@ -1,0 +1,16 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1400px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+section {
+  position: relative;
+}
