@@ -46,7 +46,7 @@ export const Footer = () => {
                             <a href="https://github.com/Juanloaiza25" target="_blank" rel="noreferrer" className="opacity-40 hover:opacity-100 hover:text-[#4ade80] transition-all cursor-hover transform hover:scale-110">
                                 <Github size={24} />
                             </a>
-                            <a href="https://linkedin.com/in/juan-diego-loaiza" target="_blank" rel="noreferrer" className="opacity-40 hover:opacity-100 hover:text-[#4ade80] transition-all cursor-hover transform hover:scale-110">
+                            <a href="https://www.linkedin.com/in/juandiegoloaiza25/" target="_blank" rel="noreferrer" className="opacity-40 hover:opacity-100 hover:text-[#4ade80] transition-all cursor-hover transform hover:scale-110">
                                 <Linkedin size={24} />
                             </a>
                         </div>
