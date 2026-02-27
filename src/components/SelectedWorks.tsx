@@ -4,7 +4,7 @@ export const SelectedWorks = () => {
             title: "ADOC - SaaS Platform",
             description: "SaaS platform for documentary advisory in operations and quality. Manages checklists, forms, and compliance for INVIMA and BPM standards.",
             tags: ["TypeScript", "React", "Supabase", "Tailwind"],
-            link: "https://github.com/Juanloaiza25/ADOC",
+            link: "https://adoc-two.vercel.app/",
             image: "/adoc.png"
         },
         {
