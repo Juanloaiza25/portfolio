@@ -7,7 +7,7 @@ export const Contact = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const formData = new FormData(e.target as HTMLFormElement);
-        formData.append("access_key", "cbf7a620-ad79-4766-ada1-740d9ad645b8");
+        formData.append("access_key", "6da113bd-b92d-43da-81ad-fd0ccb80fc34");
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
