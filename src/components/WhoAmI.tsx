@@ -3,11 +3,8 @@ import avatarImg from '../assets/avatar_exe.png'
 
 export const WhoAmI = () => {
     return (
-        <section className="w-full py-24 px-6 flex justify-center bg-[#f5f5f0] relative overflow-hidden">
-            {/* Background Grid Pattern for the section */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '30px 30px' }}
-            />
+        <section id="about" className="w-full py-24 px-6 flex justify-center bg-transparent relative overflow-hidden">
+            {/* Background pattern removed to use global blueprint */}
 
             <div className="max-w-6xl w-full border-[4px] border-black bg-white p-8 md:p-14 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] flex flex-col md:flex-row gap-16 relative z-10 transition-transform ">
 
@@ -40,9 +37,9 @@ export const WhoAmI = () => {
                         </h2>
 
                         <div className="space-y-6">
-                          <p className="text-xl md:text-2xl font-bold leading-tight max-w-2xl text-black/90">
-                                I am Juan Diego, 
-                                a full-stack developer who 
+                            <p className="text-xl md:text-2xl font-bold leading-tight max-w-2xl text-black/90">
+                                I am Juan Diego,
+                                a full-stack developer who
                                 <span className="bg-[#FBFF48] border-2 border-black px-2 py-0.5 mx-1 inline-block">
                                     builds bold systems
                                 </span>  not boring websites.

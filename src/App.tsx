@@ -7,6 +7,7 @@ import { WhoAmI } from './components/WhoAmI'
 import { TechStack } from './components/TechStack'
 import { ExperienceLog } from './components/ExperienceLog'
 import { SelectedWorks } from './components/SelectedWorks'
+import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import { ScrollProgress } from './components/ScrollProgress'
 import './App.css'
@@ -18,25 +19,20 @@ function App() {
   useEffect(() => {
     const mouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY })
-    }
 
-    const mouseOver = () => setCursorVariant('hover')
-    const mouseOut = () => setCursorVariant('default')
+      // Dynamic detection of interactive elements
+      const target = e.target as HTMLElement
+      if (target.closest('button, a, .interactive, .cursor-hover')) {
+        setCursorVariant('hover')
+      } else {
+        setCursorVariant('default')
+      }
+    }
 
     window.addEventListener('mousemove', mouseMove)
 
-    const interactiveElements = document.querySelectorAll('button, a, .interactive')
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', mouseOver)
-      el.addEventListener('mouseleave', mouseOut)
-    })
-
     return () => {
       window.removeEventListener('mousemove', mouseMove)
-      interactiveElements.forEach(el => {
-        el.removeEventListener('mouseenter', mouseOver)
-        el.removeEventListener('mouseleave', mouseOut)
-      })
     }
   }, [])
 
@@ -63,7 +59,7 @@ function App() {
       <ScrollProgress />
       <Header />
 
-      <main className="relative min-h-screen bg-[#f5f5f0] selection:bg-black selection:text-[#FBFF48] cursor-none pt-24">
+      <main className="relative min-h-screen bg-transparent selection:bg-black selection:text-[#FBFF48] cursor-none pt-24">
         {/* Custom Cursor */}
         <motion.div
           className="fixed top-0 left-0 w-6 h-6 rounded-full pointer-events-none z-[9999] hidden lg:block"
@@ -78,6 +74,7 @@ function App() {
           <TechStack />
           <ExperienceLog />
           <SelectedWorks />
+          <Contact />
           <Footer />
         </div>
       </main>

@@ -1,13 +1,11 @@
 
 export const ExperienceLog = () => {
     const experiences = [
-        { title: "Freelance Full-Stack Developer", company: "@SELF-EMPLOYED", date: "Nov 2023 - PRESENT", color: "bg-[#FBFF48]" },
-        { title: "Data Entry Contract", company: "@INJALA INDIA", date: "Aug 2023 - Nov 2023", color: "bg-[#ff4d4d]" },
-        { title: "Project Manager", company: "@SELF-EMPLOYED", date: "Dec 2022 - Aug 2023", color: "bg-[#4ade80]" }
+        { title: "Freelance Full-Stack Developer", company: "@SELF-EMPLOYED", date: "Nov 2023 - PRESENT", color: "bg-[#FBFF48]" }
     ];
 
     return (
-        <section className="py-32 px-6">
+        <section id="experience" className="py-32 px-6 bg-transparent">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-6xl font-black mb-16 text-center uppercase tracking-tighter">
                     Experience <span className="text-[#ff4d4d] [-webkit-text-stroke:1px_#000] text-transparent md:[-webkit-text-stroke:2px_#000]">_Log</span>
